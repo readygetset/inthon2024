@@ -23,8 +23,22 @@
 **From the Perspective of Efficiency:**
 1. The theme of the datathon is Efficiency & Sustainability.
 2. Given the time constraints typical of a datathon, there is a focus on achieving much faster speeds and higher performance compared to traditional training models.
-   
-### Prompt-Engineering
-**First Attempt**
-**Second Attempt**
-**Final Attempt**
+
+### ▶️ Model
+Salesforce/instructblip-vicuna-13b
+
+### ▶️ Prompt-Engineering
+**Baseline:** Describe this image in detail. 
+
+**First Attempt:**
+List and describe all identifiable objects, people, and actions occurring within the image, focusing on their appearance, spatial arrangement, and interactions.
+
+**Second Attempt: Two-Step Prompting**
+1. The evaluation objects are assessed for its presence in the image with a response of yes or no.
+2. A query is then generated using the objects identified as present in the image: "Describe the image with the following objects: {object list from step 1}. These objects are highly likely to be in the image. Focus on their appearance, spatial arrangement, and interactions."
+🚨 Despite going through more steps and being slower, it shows slightly lower performance compared to the first attempt!
+
+**Final Attempt: Combination of first attempt & second attempt**
+Observing the strong performance in the first attempt, it was determined that making the model describe identifiable objects was the key factor for the improved results, leading to the following modification of the first stage.
+1. Describe the background of the image, describe every object in the image and its appearance in detail.
+2. Simply describe following objects in the image: {object list from step 1}. Focus on their appearance, color, actions, and interactions with surrounding objects. 
