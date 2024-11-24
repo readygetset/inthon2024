@@ -40,8 +40,9 @@ List and describe all identifiable objects, people, and actions occurring within
 
 1. The evaluation objects are assessed for its presence in the image with a response of yes or no.
 2. A query is then generated using the objects identified as present in the image: "Describe the image with the following objects: {object list from step 1}. These objects are highly likely to be in the image. Focus on their appearance, spatial arrangement, and interactions."
-   
-🚨 Despite going through more steps and being slower, it shows slightly lower performance compared to the first attempt!
+
+> [!NOTE]
+> Despite going through more steps and being slower, it shows slightly lower performance compared to the first attempt!
 
 **Final Attempt: Combination of first attempt & second attempt**
 
