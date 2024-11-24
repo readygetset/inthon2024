@@ -6,15 +6,15 @@
 **Multimodal - Reliable & Efficient Image Captioning with Vision-Language Models (VLMs)**
 
 ## Evaluation Metrics
-### Reliability Score
+### ▶️ Reliability Score
 - SPICE: Measures text quality by analyzing captions as combinations of objects, attributes, and relations.
 - CLIPScore: Assesses image-caption consistency using CLIP embeddings, even without reference captions.
 - CHAIRf: Evaluates the match between generated and actual objects, considering both precision and recall.
-### Efficiency & Sustainability Weight
+### ▶️ Efficiency & Sustainability Weight
 - Applied to the Reliability score based on the number of parameters used in model training and dataset size.
 
 ## Method
-### Why Training Free?
+### ▶️ Why Training Free?
 **From the Perspective of Training Data:**
 1. The training dataset is relatively small, with about 3,000 samples, yet it involves a comparatively large number of objects to consider (50 objects).
 2. Due to the small size of the training data, outliers are expected to have a significant impact.
